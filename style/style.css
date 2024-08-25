@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{    
+    --color-primario:  #CDE8E5;
+    --color-secundario: #4D869C;
+    --color-terciario: #EEF7FF;
+    --color-extra :#7AB2B2 ;
+    --fuente-principal:  "Inter", sans-serif;
+}
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    padding: 5%;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+}
+
+.box_principal{
+    display: flex;
+    flex-direction: column;
+    margin: 0% 15%;
+    width: 70%;
+}
+
+.texto_usuario{
+    background-color: var(--color-primario);
+    border: var(--color-primario);
+    font-size: 2rem;
+    font-family: var(--fuente-principal);
+    color: var(--color-secundario);
+    outline: none;
+    padding: 0% 0% 60% 0%;
+}
+
+.div_mensaje_condicion{
+    display: flex;
+    flex-direction: row;
+    margin: 0% 0% 5% 0%;
+}
+
+.mensaje{
+    font-family: var(--fuente-principal);
+    font-size: 0.75rem;
+    margin: 0% 0% 0% 0.5%;
+}
+
+/*Icono de precausion*/
+.zondicons--exclamation-solid {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z'/%3E%3C/svg%3E");
+    background-color: #65747D;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+
+  .div_botones{
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .boton{
+    border-radius: 20px;
+    padding: 2% 11%;
+    width: 100%;
+  }
+
+  .encriptado{
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+  }
+
+  .desencriptado{
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+  }
+
+  .box_secundario{
+    border: 10px ridge white;
+    background-color: var(--color-extra);
+    border-radius: 24px;
+    align-items: center;
+    justify-items: center;
+    border: hidden;
+    box-shadow: 3px 3px 5px 6px var(--color-secundario);
+    padding: 5% 0% 0% 0%;
+  }
+
+  .cuadro_texto_no_encotrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+    text-align: center;
+  }
+
+  .titulo_mensaje_box_secundario{
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem;
+    color: var(--color-terciario);
+    padding: 5%;
+  }
+
+  .texto_mensaje_box_secundario{
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    color: var(--color-terciario);
+  }
+
+  .boton_copiar{
+    background-color:var(--color-terciario);
+    color: var(--color-secundario);
+    border-radius: 20px;
+    padding: 2% 11%;
+    width:90%;
+    margin: 5% 5%;
+  }
+
+  .texto_respuesta{
+    background-color: var(--color-extra);
+    border: white;
+    font-size: 2rem;
+    font-family: var(--fuente-principal);
+    color: var(--color-terciario);
+    outline: none;
+    padding: 0% 0% 60% 0%;
+    width: 90%;
+    margin: 5%;
+    height: 100%;
+  }
+
+
+  
+  @media (max-width: 1024px){
+
+    .contenedor{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      justify-items: center;
+      width: auto;
+      margin: 0%;
+      padding: 15% 0% 0% 0%;
+    }
+
+    .box_principal{ 
+      width: 90%;
+    }
+
+    .box_secundario{
+      padding: 5% 0%;
+      width: 90%;
+    }
+
+    .imagen{
+      visibility: hidden;
+      display: none;
+    }
+
+    .cuadro_texto_no_encotrado{
+      margin: 0%;
+    }
+
+    .titulo_mensaje_box_secundario{
+      padding: 2%;
+    }
+    
+    .boton_copiar{
+      width: 90%;
+      margin: 5%;
+    }
+  
+  }
+  @media (max-width: 450px){
+
+    body{
+      margin: 0%;
+      padding: 5% 0%;
+    }
+
+    .contenedor{
+      margin: 0%;
+      padding: 5%;
+    }
+
+    .div_botones{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .boton_encriptado{
+      padding: 5% 11%;
+    }
+
+    .boton_desencriptado{
+      padding: 5% 11%;
+    }
+
+    .texto_respuesta{
+      width: 90%;
+      margin: 5%;
+    }
+  }
